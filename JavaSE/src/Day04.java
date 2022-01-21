@@ -9,18 +9,6 @@ public class Day04 {
 //        questionThree();
 //        questionFour();
         questionFive();
-//        List<Integer> list = new ArrayList<>();
-//        list.add(1);
-//        list.add(2);
-//        list.remove(0);
-//        list.add(1);
-//        System.out.println(list);
-//        List<List<Integer>> lists = new ArrayList<>();
-//        list.add(1);
-//        list.add(2);
-//        list.add(3);
-//        untils.array(list,lists,list.size());
-//        System.out.println(lists);
     }
 
     /**

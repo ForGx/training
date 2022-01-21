@@ -20,21 +20,19 @@ public class untils {
             return false;
         }
     }
-    //排列组合
-    public static <T> void array (List<T> list,List<List<T>> lists, Integer size){
-//        List<List<T>> lists=new ArrayList<>();
-        for (int i=0;i<list.size();i++){
-            T t=list.get(0);
-            list.remove(0);
-            if(list.size()!=1) {
-                array(list,lists,size);
-            }
-            list.add(t);
-//            System.out.println(list);
-            if (list.size()==size) {
-                System.out.println(list);
-                lists.add(list);
-                System.out.println(lists);
+    //排列
+    public static <T> void array (List<T> list,List<List<T>> lists,Integer index){
+        int x=index;
+        for (;index<list.size();index++){
+            List<T> listCopy=new ArrayList<>(list);
+            T t=listCopy.get(x);
+            listCopy.set(x,list.get(index));
+            listCopy.set(index,t);
+            array(listCopy,lists,x+1);
+            if (x==(list.size()-1)) {
+                lists.add(listCopy);
+            } else {
+                listCopy.clear();
             }
         }
     }

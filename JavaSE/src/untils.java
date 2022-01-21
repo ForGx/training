@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class untils {
-    //判断字符串是否为数字
+    //判断字符串是否为整数
     public static boolean isNum(String str){
         try {
             Integer.parseInt(str);
@@ -19,6 +19,19 @@ public class untils {
         }catch (Exception e){
             return false;
         }
+    }
+    //判断字符是否为字母
+    public static boolean isLetter(char c){
+        if((c>='a'&&c<='z')||(c>='A'&&c<='Z')){
+            return true;
+        }
+        return false;
+    }
+    public static char changeCase(char c){
+        if (c>='a'&&c<='z'){
+            return (char) (c-32);
+        }
+        return (char) (c+32);
     }
     //排列
     public static <T> void array (List<T> list,List<List<T>> lists,Integer index){
